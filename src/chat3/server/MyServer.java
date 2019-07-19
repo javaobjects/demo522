@@ -6,11 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.xml.ws.handler.MessageContext.Scope;
 
 public class MyServer {
 	
-
 	/**
 	 * 
 	 * <p>Title: main</p>  
@@ -24,8 +22,6 @@ public class MyServer {
 	
 	//存放客户端套接字的集合,为什么给集合上锁，支持并发访问，确保数据安全
 	public static List<Socket> socketList = Collections.synchronizedList(new ArrayList<>());
-	
-	
 	
 	public static void main(String[] args) {
 		//开一个服务端
